@@ -1,0 +1,224 @@
+/* Import ArcGIS CSS */
+@import "https://js.arcgis.com/4.34/@arcgis/core/assets/esri/themes/light/main.css";
+
+/* Global Reset and Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Enhanced ArcGIS Popup Styling */
+.esri-popup__main-container {
+  max-width: 500px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+.esri-popup__header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border-radius: 12px 12px 0 0 !important;
+}
+
+.esri-popup__header-title {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: white !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.esri-popup__content {
+  padding: 20px !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+.esri-popup__button {
+  color: white !important;
+}
+
+.esri-popup__button:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.esri-popup__action-text {
+  color: white !important;
+}
+
+/* Enhanced View UI */
+.esri-view-surface {
+  cursor: crosshair !important;
+}
+
+.esri-view-surface--inset-outline:focus::after {
+  outline: auto 2px Highlight !important;
+  outline: auto 5px -webkit-focus-ring-color !important;
+}
+
+/* Widget Styling */
+.esri-widget {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.esri-legend {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.esri-legend__layer-caption {
+  font-weight: 600 !important;
+  color: #333 !important;
+}
+
+.esri-home {
+  background: white !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.esri-home:hover {
+  background: #f0f0f0 !important;
+}
+
+.esri-scale-bar {
+  background: rgba(255, 255, 255, 0.9) !important;
+  padding: 8px !important;
+  border-radius: 6px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Expand Widget */
+.esri-expand {
+  background: white !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 8px !important;
+}
+
+.esri-expand__icon {
+  color: #667eea !important;
+}
+
+.esri-expand__container {
+  border-radius: 8px !important;
+}
+
+/* Attribution */
+.esri-attribution {
+  background: rgba(255, 255, 255, 0.85) !important;
+  font-size: 11px !important;
+}
+
+/* Feature Layer Highlight */
+.esri-feature-layer__highlight {
+  fill: rgba(255, 255, 0, 0.3) !important;
+  stroke: rgba(255, 255, 0, 0.9) !important;
+  stroke-width: 2px !important;
+}
+
+/* Loading Animation for Features */
+.esri-layer-list__item--updating .esri-layer-list__item-toggle {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Selection Effect */
+.esri-view-surface:active {
+  cursor: grabbing !important;
+}
+
+/* Enhanced Zoom Controls */
+.esri-zoom .esri-widget--button {
+  background: white !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.esri-zoom .esri-widget--button:hover {
+  background: #f0f0f0 !important;
+}
+
+/* Print and Share Widgets */
+.esri-print,
+.esri-share {
+  background: white !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Custom Tooltip Styling */
+.custom-tooltip {
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1000;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Accessibility Focus Styles */
+button:focus,
+input:focus,
+select:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .esri-popup__main-container {
+    border: 2px solid black !important;
+  }
+  
+  .control-panel,
+  .instructions-panel,
+  .statistics-panel {
+    border: 2px solid black !important;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .control-panel,
+  .instructions-panel,
+  .statistics-panel,
+  .app-header,
+  .panel-toggle-btn,
+  .search-bar-container {
+    display: none !important;
+  }
+  
+  .mapDiv {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
