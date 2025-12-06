@@ -3,6 +3,12 @@
 
 This web-based GIS dashboard for U.S. county air quality uniquely combines real-time EPA data with emissions data, enabling users to monitor conditions in their area and make informed decisions. By integrating both live AQI readings—ozone, PM2.5, and PM10—from EPA AirNow stations and 2020 NEI county emissions totals, the platform offers a comprehensive view not available in standard dashboards. Users can search for counties, click on map features, and view detailed information panels to easily track and compare air quality and emissions across regions. Built with React and the ArcGIS Maps SDK for JavaScript, the tool highlights areas with poor air quality and high emissions, empowering users to take personal, community, or policy action.
 
+## 🌐 Live Demo
+
+The County Air Quality Explorer is live and publicly accessible here:
+
+**https://purnasaud.github.io/county-air-quality-explorer/**
+
 
 ## Key Features
 
