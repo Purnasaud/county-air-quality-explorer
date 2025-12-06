@@ -24,29 +24,6 @@ This web-based GIS dashboard for U.S. county air quality uniquely combines real-
 - ***CSS/HTML5*** and simple UI libraries (e.g., Flexbox layout). No backend server – all data is fetched directly from EPA/ArcGIS services.
 - ***No backend server*** All data fetched client-side vis ArcGIS services
 
-## Project Structure
-
-county-air-quality-explorer/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   ├── MapView.jsx
-│   │   └── SearchBar.jsx
-│   ├── config/
-│   │   └── constants.js
-│   ├── App.css
-│   ├── App.js
-│   ├── config.js
-│   ├── index.css
-│   └── index.js
-├── SearchBar.css
-├── package.json
-├── package-lock.json
-└── README.md
-
-
-
 
 ## 📝 License
 
@@ -59,13 +36,6 @@ M.Sc. Student in GIS & Cartography
 Graduate Research Assistant  
 School of Computing, University of Wyoming  
 Email: psaud@uwyo.edu
-
-## Acknowledgments
-
-- U.S. Environmental Protection Agency for AirNow and NEI data
-- Esri for ArcGIS Maps SDK and Living Atlas
-- University of Wyoming School of Computing
-- GIST-5300 Course Instructors
 
 ## 📚 References
 
