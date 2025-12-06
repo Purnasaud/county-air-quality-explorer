@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "An interactive web GIS dashboard built with React and the ArcGIS Maps SDK for JavaScript that displays real-time air quality data and 2020 emissions statistics for U.S. counties.",
   "main": "index.js",
+  "homepage": "https://purnasaud.github.io/county-air-quality-explorer",
   "dependencies": {
     "@arcgis/core": "^4.34.8",
     "abab": "^2.0.6",
