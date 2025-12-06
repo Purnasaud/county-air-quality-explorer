@@ -37,13 +37,6 @@ Graduate Research Assistant
 School of Computing, University of Wyoming  
 Email: psaud@uwyo.edu
 
-## Acknowledgments
-
-- U.S. Environmental Protection Agency for AirNow and NEI data
-- Esri for ArcGIS Maps SDK and Living Atlas
-- University of Wyoming School of Computing
-- GIST-5300 Course Instructors
-
 ## 📚 References
 
 - [EPA AirNow](https://www.airnow.gov/)
