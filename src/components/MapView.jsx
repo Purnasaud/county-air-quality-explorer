@@ -160,7 +160,7 @@ function MapViewComponent() {
     emissions: true,
     monitors: true
   });
-  const [currentBasemap, setCurrentBasemap] = useState('gray-vector');
+  const [currentBasemap, setCurrentBasemap] = useState('osm');
 
   const getMaxAQIFromAttrs = (attrs) => {
     const pollutants = [
@@ -787,10 +787,9 @@ function MapViewComponent() {
     });
   };
 
-  useEffect(() => {
-    if (ARCGIS_API_KEY) {
-      esriConfig.apiKey = ARCGIS_API_KEY
-    }
+useEffect(() => {
+    esriConfig.apiKey = "";
+    //esriConfig.request.useIdentity = false;
 
     const map = new Map({ basemap: 'osm' });
 
@@ -1154,14 +1153,14 @@ function MapViewComponent() {
                   value={currentBasemap}
                   onChange={(e) => changeBasemap(e.target.value)}
                 >
-                  <option value="streets-vector">Streets</option>
-                  <option value="topo-vector">Topographic</option>
-                  <option value="satellite">Satellite</option>
-                  <option value="hybrid">Hybrid (Satellite + Labels)</option>
-                  <option value="gray-vector">Gray Canvas</option>
-                  <option value="dark-gray-vector">Dark Gray Canvas</option>
-                  <option value="oceans">Oceans</option>
                   <option value="osm">OpenStreetMap</option>
+                  <option value="streets-vector">Streets (requires API key)</option>
+                  <option value="topo-vector">Topographic (requires API key)</option>
+                  <option value="satellite">Satellite (requires API key)</option>
+                  <option value="hybrid">Hybrid (requires API key)</option>
+                  <option value="gray-vector">Gray Canvas (requires API key)</option>
+                  <option value="dark-gray-vector">Dark Gray Canvas (requires API key)</option>
+                  <option value="oceans">Oceans (requires API key)</option>
                 </select>
               </div>
 
