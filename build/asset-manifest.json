@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/county-air-quality-explorer/static/css/main.4b561fb5.css",
-    "main.js": "/county-air-quality-explorer/static/js/main.e73e2ca5.js",
+    "main.js": "/county-air-quality-explorer/static/js/main.44212e19.js",
     "static/js/6070.fc177e65.chunk.js": "/county-air-quality-explorer/static/js/6070.fc177e65.chunk.js",
     "static/js/623.a2d0c40f.chunk.js": "/county-air-quality-explorer/static/js/623.a2d0c40f.chunk.js",
     "static/js/1145.e2c54938.chunk.js": "/county-air-quality-explorer/static/js/1145.e2c54938.chunk.js",
@@ -456,7 +456,7 @@
     "static/js/5611.de507721.chunk.js": "/county-air-quality-explorer/static/js/5611.de507721.chunk.js",
     "index.html": "/county-air-quality-explorer/index.html",
     "main.4b561fb5.css.map": "/county-air-quality-explorer/static/css/main.4b561fb5.css.map",
-    "main.e73e2ca5.js.map": "/county-air-quality-explorer/static/js/main.e73e2ca5.js.map",
+    "main.44212e19.js.map": "/county-air-quality-explorer/static/js/main.44212e19.js.map",
     "6070.fc177e65.chunk.js.map": "/county-air-quality-explorer/static/js/6070.fc177e65.chunk.js.map",
     "623.a2d0c40f.chunk.js.map": "/county-air-quality-explorer/static/js/623.a2d0c40f.chunk.js.map",
     "1145.e2c54938.chunk.js.map": "/county-air-quality-explorer/static/js/1145.e2c54938.chunk.js.map",
@@ -883,6 +883,6 @@
   },
   "entrypoints": [
     "static/css/main.4b561fb5.css",
-    "static/js/main.e73e2ca5.js"
+    "static/js/main.44212e19.js"
   ]
 }

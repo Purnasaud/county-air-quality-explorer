@@ -4,18 +4,18 @@ export const ARCGIS_API_KEY = "AAPTxy8BH1VEsoebNVZXo8HurJePK6lAVAuvJ7hRg1crmH9Bu
 // Data Layer Configuration
 export const LAYERS = {
   AIRNOW_MONITORS: {
-    portalItemId: "2d718d2733a74d1689d72b922c0ac4f4",
+    url: "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Air%20Now%20Current%20Monitor%20Data%20Public/FeatureServer/0",
     title: "AirNow Real-Time Air Quality Monitors",
     refreshInterval: 60,
     outFields: ["*"],
     popupEnabled: true
   },
-  
+
   COUNTY_EMISSIONS: {
-    portalItemId: "4f162daa1d5444f1b2189efe0f75eee5",
-    layerId: 0,
+    url: "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/NEI_2020_for_County_Level_Emissions_US_EPA_OAR_OAQPS/FeatureServer/0",
     title: "2020 NEI County Emissions",
-    opacity: 0.7
+    opacity: 0.7,
+    outFields: ["*"]
   }
 };
 

@@ -6,7 +6,8 @@ import Legend from '@arcgis/core/widgets/Legend';
 import Home from '@arcgis/core/widgets/Home';
 import ScaleBar from '@arcgis/core/widgets/ScaleBar';
 import Expand from '@arcgis/core/widgets/Expand';
-import esriConfig from '@arcgis/core/config';
+//import esriConfig from '@arcgis/core/config';
+import esriConfig from "@arcgis/core/config.js";
 import Chart from 'chart.js/auto';
 import SearchBar from './SearchBar';
 import { 
@@ -787,9 +788,11 @@ function MapViewComponent() {
   };
 
   useEffect(() => {
-    esriConfig.apiKey = ARCGIS_API_KEY;
+    if (ARCGIS_API_KEY) {
+      esriConfig.apiKey = ARCGIS_API_KEY
+    }
 
-    const map = new Map({ basemap: 'gray-vector' });
+    const map = new Map({ basemap: 'osm' });
 
     const view = new MapView({
       container: mapDiv.current,
@@ -853,8 +856,7 @@ function MapViewComponent() {
     const CLUSTER_OFF_ZOOM = 10;
 
     const emissionsLayer = new FeatureLayer({
-      portalItem: { id: LAYERS.COUNTY_EMISSIONS.portalItemId },
-      layerId: LAYERS.COUNTY_EMISSIONS.layerId,
+      url: LAYERS.COUNTY_EMISSIONS.url,
       title: LAYERS.COUNTY_EMISSIONS.title,
       opacity: LAYERS.COUNTY_EMISSIONS.opacity,
       outFields: LAYERS.COUNTY_EMISSIONS.outFields,
@@ -870,7 +872,7 @@ function MapViewComponent() {
     });
 
     const monitorsLayer = new FeatureLayer({
-      portalItem: { id: LAYERS.AIRNOW_MONITORS.portalItemId },
+      url: LAYERS.AIRNOW_MONITORS.url,
       title: LAYERS.AIRNOW_MONITORS.title,
       outFields: ['*'],
       refreshInterval: LAYERS.AIRNOW_MONITORS.refreshInterval,
