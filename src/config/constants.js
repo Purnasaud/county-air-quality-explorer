@@ -2,14 +2,13 @@
 // Leave empty string for public services - passing a key to public services causes "Invalid token"
 export const ARCGIS_API_KEY = "";
 
-// Data Layer Configuration
 export const LAYERS = {
   AIRNOW_MONITORS: {
     url: "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Air%20Now%20Current%20Monitor%20Data%20Public/FeatureServer/0",
     title: "AirNow Real-Time Air Quality Monitors",
     refreshInterval: 60,
     outFields: ["*"],
-    popupEnabled: true
+    popupEnabled: truegit 
   },
   COUNTY_EMISSIONS: {
     url: "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/NEI_2020_for_County_Level_Emissions_US_EPA_OAR_OAQPS/FeatureServer/0",
