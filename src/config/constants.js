@@ -8,7 +8,7 @@ export const LAYERS = {
     title: "AirNow Real-Time Air Quality Monitors",
     refreshInterval: 60,
     outFields: ["*"],
-    popupEnabled: truegit 
+    popupEnabled: true
   },
   COUNTY_EMISSIONS: {
     url: "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/NEI_2020_for_County_Level_Emissions_US_EPA_OAR_OAQPS/FeatureServer/0",
