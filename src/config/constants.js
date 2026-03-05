@@ -37,7 +37,7 @@ export const getAQICategory = (aqi) => {
 
 // Map Initial View Settings
 export const MAP_CONFIG = {
-  basemap: "gray-vector",
+  basemap: "osm",
   center: [-98, 39.5],
   zoom: 4,
   constraints: {
