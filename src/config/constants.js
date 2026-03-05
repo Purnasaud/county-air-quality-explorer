@@ -2,7 +2,6 @@
 // Leave empty string for public services - passing a key to public services causes "Invalid token"
 export const ARCGIS_API_KEY = "";
 
-// Data Layer Configuration
 export const LAYERS = {
   AIRNOW_MONITORS: {
     url: "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Air%20Now%20Current%20Monitor%20Data%20Public/FeatureServer/0",
