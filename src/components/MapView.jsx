@@ -935,7 +935,21 @@ useEffect(() => {
       }
     });
 
-    const homeWidget = new Home({ view });
+    const homeWidget = new Home({
+  view,
+  viewpoint: {
+    targetGeometry: {
+      type: "extent",
+      xmin: -125,
+      ymin: 24,
+      xmax: -66.5,
+      ymax: 49.5,
+      spatialReference: { wkid: 4326 }
+    }
+  }
+});
+
+view.ui.add(homeWidget, 'top-left');
     view.ui.add(homeWidget, 'top-left');
 
     const scaleBar = new ScaleBar({ view, unit: 'dual' });

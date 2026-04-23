@@ -28,14 +28,27 @@ function SearchBar({ onSearchResult, emissionsLayer, view }) {
 
       const sanitizedQuery = query.replace(/['";\\]/g, '');
       
+      // Split on comma to handle "Laramie, WY" style queries
+      const parts = sanitizedQuery.split(',').map(p => p.trim());
+      const countyPart = parts[0];
+      const statePart = parts[1] || '';
+
+      let whereClause;
+      if (statePart) {
+  // User typed "County, State" — match both fields
+        whereClause = `UPPER(County) LIKE UPPER('%${countyPart}%') AND UPPER(State) LIKE UPPER('%${statePart}%')`;
+      } else {
+  // Single term — search either field
+        whereClause = `UPPER(County) LIKE UPPER('%${countyPart}%') OR UPPER(State) LIKE UPPER('%${countyPart}%')`;
+     }
+
       const result = await emissionsLayer.queryFeatures({
-        where: `UPPER(County) LIKE UPPER('%${sanitizedQuery}%') OR UPPER(State) LIKE UPPER('%${sanitizedQuery}%')`,
+        where: whereClause,
         outFields: ['County', 'State', 'OBJECTID'],
         returnGeometry: true,
         orderByFields: ['County ASC'],
-  
         signal: abortControllerRef.current.signal
-      });
+     });
 
       const results = result.features.map(feature => ({
         county: feature.attributes.County,
@@ -96,7 +109,7 @@ function SearchBar({ onSearchResult, emissionsLayer, view }) {
           target: result.geometry,
           zoom: 9
         }, {
-          duration: 1200,
+          duration: 800,
           easing: 'ease-in-out'
         });
 
