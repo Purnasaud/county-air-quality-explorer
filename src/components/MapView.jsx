@@ -860,6 +860,7 @@ useEffect(() => {
       opacity: LAYERS.COUNTY_EMISSIONS.opacity,
       outFields: LAYERS.COUNTY_EMISSIONS.outFields,
       popupEnabled: false,
+      maxRecordCountFactor: 5,
       renderer: {
         type: 'simple',
         symbol: {
@@ -978,7 +979,7 @@ view.ui.add(homeWidget, 'top-left');
             MONITOR_FIELDS.PM10_LABEL
           ],
           returnGeometry: false,
-          num: 2000
+          num: 5000
         })
       ]).then(([count, result]) => {
         let totalAQI = 0;
